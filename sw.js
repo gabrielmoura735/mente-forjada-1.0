@@ -1,5 +1,5 @@
 // Service Worker para Mente Forjada - Suporte Offline e Notificações no Lockscreen
-const CACHE_NAME = 'mente-forjada-v21';
+const CACHE_NAME = 'mente-forjada-v22';
 const ASSETS_TO_CACHE = [
     './',
     './index.html',
@@ -7,6 +7,9 @@ const ASSETS_TO_CACHE = [
     './app.js',
     './audio-synth.js',
     './settings.js',
+    './more_principles.js',
+    './features.js',
+    './community.js',
     './manifest.json'
 ];
 
