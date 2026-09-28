@@ -3838,7 +3838,7 @@ window.generateDesktopWallpaper = function(principle, theme = 'gold') {
 
     ctx.fillStyle = textCol;
     ctx.font = 'bold 42px "Cinzel", serif';
-    const textLines = wrapTextDesktop(ctx, principle.title.toUpperCase(), boxW - 100);
+    const textLines = wrapTextDesktop(ctx, (principle.trailLabel || 'PRINCÍPIO').toUpperCase(), boxW - 100);
     let titleY = boxY + 180;
     textLines.forEach(l => {
         ctx.fillText(l, 1920 / 2, titleY);
@@ -3910,7 +3910,7 @@ function initLockscreenNotifications() {
         all.forEach(p => {
             const opt = document.createElement('option');
             opt.value = p.id;
-            opt.textContent = `[${p.tag}] ${p.title}`;
+            opt.textContent = `[${p.trailLabel || 'Princípio'}] ${p.quote.length > 50 ? p.quote.substring(0, 50) + '...' : p.quote}`;
             selectPhrase.appendChild(opt);
         });
     }
